@@ -44,8 +44,8 @@ If you want to run this project on your computer, follow these steps.
 ### 1. Clone the repository
 
 ```bash
-git clone (https://github.com/anukulchoudhary07/Mern-markdown-notes)
-cd mern-markdown-notes
+git clone https://github.com/anukulchoudhary07/Mern-markdown-notes.git
+cd Mern-markdown-notes
 ```
 
 ### 2. Set up the backend
@@ -71,7 +71,7 @@ npm run dev
 
 ### 3. Set up the frontend
 
-Open another terminal:
+Open another terminal from the project folder:
 
 ```bash
 cd client
