@@ -1,0 +1,547 @@
+
+/* ==============================
+   GLOBAL APP LAYOUT
+================================= */
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 24px;
+}
+
+/* ==============================
+   APPLICATION HEADER
+================================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header button {
+  padding: 11px 20px;
+  background: #2457c5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(36, 87, 197, 0.2);
+  transition: all 0.2s ease;
+}
+
+.header button:hover {
+  background: #1946a3;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   NOTES SECTION
+================================= */
+
+.notes-section {
+  margin-top: 30px;
+}
+
+.notes-section h2 {
+  font-size: 22px;
+  color: #1e293b;
+  margin-bottom: 22px;
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+/* ==============================
+   NOTE CARDS
+================================= */
+
+.note-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.note-card h3 {
+  font-size: 18px;
+  color: #1e293b;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* ==============================
+   TAGS
+================================= */
+
+.note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 11px;
+  background: #eaf1ff;
+  color: #2457c5;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==============================
+   MARKDOWN INSIDE NOTE CARDS
+================================= */
+
+.note-markdown {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  margin-bottom: 20px;
+}
+
+.note-markdown h1,
+.note-markdown h2,
+.note-markdown h3 {
+  color: #1e293b;
+  margin: 12px 0;
+}
+
+.note-markdown h1 {
+  font-size: 22px;
+}
+
+.note-markdown h2 {
+  font-size: 19px;
+}
+
+.note-markdown h3 {
+  font-size: 16px;
+}
+
+.note-markdown p {
+  margin-bottom: 10px;
+}
+
+.note-markdown ul,
+.note-markdown ol {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.note-markdown li {
+  margin-bottom: 5px;
+}
+
+.note-markdown strong {
+  color: #2457c5;
+}
+
+.note-markdown pre {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.note-markdown code {
+  background: #f1f5f9;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* ==============================
+   NOTE ACTIONS
+================================= */
+
+.note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.note-card button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.note-card button:first-of-type {
+  background: #eaf1ff;
+  color: #2457c5;
+}
+
+.note-card button:first-of-type:hover {
+  background: #2457c5;
+  color: white;
+}
+
+.note-card button:last-of-type {
+  background: #fff0f0;
+  color: #dc3545;
+}
+
+.note-card button:last-of-type:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* ==============================
+   NOTE EDITOR
+================================= */
+
+.editor-section {
+  margin-top: 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.editor-section h2 {
+  font-size: 22px;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.editor-section input,
+.editor-section textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1e293b;
+  background: #fafafa;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.editor-section input:focus,
+.editor-section textarea:focus {
+  border-color: #2457c5;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(36, 87, 197, 0.1);
+}
+
+.editor-section textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* ==============================
+   MARKDOWN EDITOR LAYOUT
+================================= */
+
+.editor-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.markdown-input,
+.markdown-preview {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.markdown-input h3,
+.markdown-preview h3 {
+  margin-bottom: 15px;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+.markdown-input textarea {
+  width: 100%;
+  min-height: 280px;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: monospace;
+  line-height: 1.6;
+}
+
+.markdown-preview {
+  background: #ffffff;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.markdown-preview h1 {
+  font-size: 28px;
+  color: #1e293b;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.markdown-preview h2 {
+  font-size: 22px;
+  color: #334155;
+}
+
+.markdown-preview h3 {
+  font-size: 18px;
+  color: #475569;
+}
+
+.markdown-preview strong {
+  color: #2457c5;
+  font-weight: 700;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  padding-left: 25px;
+  margin: 15px 0;
+}
+
+.markdown-preview li {
+  margin-bottom: 8px;
+  color: #475569;
+}
+
+.markdown-preview p {
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* ==============================
+   EDITOR BUTTONS
+================================= */
+
+.editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.editor-section button {
+  padding: 11px 22px;
+  background: #2457c5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.editor-section button:hover {
+  background: #1946a3;
+  transform: translateY(-2px);
+}
+
+.editor-actions .cancel-button {
+  background: #64748b;
+}
+
+.editor-actions .cancel-button:hover {
+  background: #475569;
+}
+
+/* ==============================
+   AUTHENTICATION PAGE
+================================= */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.auth-card h2 {
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.auth-card p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.auth-card input {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.auth-card form button {
+  width: 100%;
+  padding: 12px;
+  background: #2457c5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.auth-card p button {
+  background: none;
+  border: none;
+  color: #2457c5;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ==============================
+   EMPTY STATE
+================================= */
+
+.empty-message {
+  color: #64748b;
+  padding: 20px 0;
+}
+
+/* ==============================
+   LOADING MESSAGES
+================================= */
+
+.status-message {
+  color: #2457c5;
+  font-size: 14px;
+  padding: 15px 0;
+  font-weight: 600;
+}
+
+/* ==============================
+   ERROR MESSAGES
+================================= */
+
+.error-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  color: #b42318;
+  background: #fff0f0;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.error-message button {
+  border: none;
+  background: transparent;
+  color: #b42318;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ==============================
+   DISABLED BUTTONS
+================================= */
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 700px) {
+  .editor-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 15px;
+  }
+
+  .header {
+    gap: 15px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .header button {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .notes-list {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-section {
+    padding: 20px;
+  }
+
+  .note-actions button {
+    flex: 1;
+  }
+}
