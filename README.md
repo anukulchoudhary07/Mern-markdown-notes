@@ -44,7 +44,7 @@ If you want to run this project on your computer, follow these steps.
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone (https://github.com/anukulchoudhary07/Mern-markdown-notes)
 cd mern-markdown-notes
 ```
 
