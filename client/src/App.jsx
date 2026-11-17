@@ -2,6 +2,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import API from './api/axios';
 
 import {
@@ -428,8 +429,8 @@ function App() {
 
                 {/* Markdown content */}
                 <div className="note-markdown">
-                  <ReactMarkdown>
-                    {note.content || ''}
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {note.content}
                   </ReactMarkdown>
                 </div>
 
