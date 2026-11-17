@@ -1,25 +1,47 @@
-# MERN Markdown Note-Taking App
+# Markdown Notes App
 
-A simple and practical note-taking application that I built to improve my full-stack development skills.
+A simple and practical note-taking application built using the MERN stack.
 
-The idea behind this project was to create a place where users can write, organize, edit, and manage their notes using Markdown. While building it, I got hands-on experience working with the frontend, backend, database, and authentication together.
+I built this project to practice full-stack development and understand how the frontend, backend, database, and authentication work together in a real application.
 
-## What can you do with it?
+The app allows users to create an account, log in, and manage their personal notes. It also includes a Markdown editor with a live preview, so users can format their notes while writing.
+
+## Live Demo
+
+Try the application here:
+
+**[Markdown Notes App](https://my-markdown-notes.vercel.app/)**
+
+## Screenshots
+
+### Login
+![Login Page](screenshots/login.png)
+
+### Register
+![Register Page](screenshots/register.png)
+
+### Notes Dashboard
+![Notes Dashboard](screenshots/dashboard.png)
+
+## What Can You Do With It?
 
 - Create an account and log in securely.
-- Create, edit, and delete your notes.
-- Write notes using Markdown and see a live preview.
-- Organize notes using tags.
-- Access your saved notes even after refreshing the page.
-- Keep each user's notes private through protected API routes.
+- Create, edit, and delete notes.
+- Write notes using Markdown.
+- Preview Markdown content while writing.
+- Use task lists, tables, and other GitHub Flavored Markdown features.
+- Add tags to organize notes.
+- Access your own notes after logging in.
+- Continue working with saved notes after refreshing the page.
 
-## Technologies I used
+## Technologies I Used
 
 **Frontend**
-- React
+- React.js
 - Vite
 - Axios
 - React Markdown
+- Remark GFM
 - CSS
 
 **Backend**
@@ -27,17 +49,24 @@ The idea behind this project was to create a place where users can write, organi
 - Express.js
 - MongoDB
 - Mongoose
-- JSON Web Token (JWT)
-- bcrypt
+- JWT
+- bcrypt.js
 
-## How the project is organized
+**Deployment**
+- Vercel for the frontend
+- Render for the backend
+- MongoDB Atlas for the database
+
+## How the Project Is Organized
 
 The project has two main parts:
 
-- `client` – Handles the user interface and everything users interact with.
-- `server` – Handles authentication, note operations, API routes, and database communication.
+- `client` – Contains the React frontend.
+- `server` – Contains the Express backend, API routes, controllers, models, and authentication logic.
 
-## Run the project locally
+There is also a `screenshots` folder containing images of the application.
+
+## Run the Project Locally
 
 If you want to run this project on your computer, follow these steps.
 
@@ -45,6 +74,7 @@ If you want to run this project on your computer, follow these steps.
 
 ```bash
 git clone https://github.com/anukulchoudhary07/Mern-markdown-notes.git
+
 cd Mern-markdown-notes
 ```
 
@@ -55,7 +85,7 @@ cd server
 npm install
 ```
 
-Create a `.env` file inside the `server` folder and add your own configuration:
+Create a `.env` file inside the `server` folder:
 
 ```env
 PORT=5000
@@ -71,35 +101,79 @@ npm run dev
 
 ### 3. Set up the frontend
 
-Open another terminal from the project folder:
+Open another terminal:
 
 ```bash
 cd client
 npm install
+```
+
+Create a `.env` file inside the `client` folder:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+Start the frontend:
+
+```bash
 npm run dev
 ```
 
-Open the local URL shown in your terminal to use the application.
+Open the local URL provided by Vite in your browser.
 
-## Production build
+## API Endpoints
 
-To create a production build of the frontend:
+Here are the main API routes used in the application.
 
-```bash
-cd client
-npm run build
-```
+### User Authentication
 
-The generated files will be available in the `client/dist` folder.
+| Method | Endpoint | Purpose |
+|---|---|---|
+| POST | `/api/users/register` | Create a new account |
+| POST | `/api/users/login` | Log in to an account |
 
-## A little about the project
+### Notes
 
-This is one of my hands-on MERN stack projects. I built it to move beyond just learning individual technologies and understand how a complete application works.
+| Method | Endpoint | Purpose |
+|---|---|---|
+| POST | `/api/notes` | Create a note |
+| GET | `/api/notes` | Get all your notes |
+| GET | `/api/notes/:id` | Get a specific note |
+| PUT | `/api/notes/:id` | Update a note |
+| DELETE | `/api/notes/:id` | Delete a note |
 
-It helped me practice React state management, REST APIs, authentication, database operations, and connecting a frontend with a backend.
+Note routes are protected and require a valid JWT token.
 
-I'm continuing to improve the project as I learn more about full-stack development.
+## What I Learned
+
+While building this project, I got practical experience with:
+
+- Connecting a React frontend to an Express backend.
+- Building REST APIs and handling HTTP requests.
+- Implementing user registration and login with JWT.
+- Hashing passwords using bcrypt.
+- Connecting MongoDB Atlas with a Node.js application.
+- Using Axios to communicate with backend APIs.
+- Managing application state and handling loading and error states.
+- Deploying a full-stack application using Vercel and Render.
+
+## Future Improvements
+
+I would like to add a few more features as I continue working on this project:
+
+- Search notes by title or content.
+- Pin important notes.
+- Add dark mode.
+- Improve the Markdown editing experience.
+- Allow users to share notes.
+
+## Author
+
+**Kanha Choudhary**
+
+GitHub: [anukulchoudhary07](https://github.com/anukulchoudhary07)
 
 ---
 
-**Built as a learning project using the MERN stack.**
+Thanks for checking out my project!
