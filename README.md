@@ -170,7 +170,7 @@ I would like to add a few more features as I continue working on this project:
 
 ## Author
 
-**Kanha Choudhary**
+**Anukul Choudhary**
 
 GitHub: [anukulchoudhary07](https://github.com/anukulchoudhary07)
 
